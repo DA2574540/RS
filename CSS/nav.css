@@ -1,0 +1,30 @@
+nav {
+    position: fixed;
+    width: 65%;
+    display: flex;
+    justify-content: center; /* Ensure nav items are centered */
+    align-items: center;
+    background-color: green;
+
+    img {
+        width: 80px;
+    }
+
+    ul {
+        display: flex;
+        justify-content: center; /* Center the ul items */
+
+        li {
+            h1 {
+                color: white;
+                font-size: 25px;
+            }
+
+            .nav-item {
+                color: white;
+                font-size: 25px;
+                margin: 0px 20px 0px 20px;
+            }
+        }
+    }
+}

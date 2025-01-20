@@ -1,0 +1,229 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    text-decoration: none;
+    list-style: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: black;
+}
+
+/* Navigasi */
+nav {
+    position: fixed;
+    margin: 40px 0px 0px 0px;
+    left: 25%;
+    align-items: center;
+    display: flex;
+    
+    .logo{
+        img{
+            width: 80px;
+            float: left;
+        }
+    }
+
+    ul{
+        display: flex;
+        align-items: center;
+        li{
+            h1{
+                color: white;
+                font-size: 25px;
+                margin-right: 20px;
+            }
+
+            .nav-item{
+                color: white;
+                font-size: 15px;
+                margin: 0px 20px 0px 20px;
+                padding-bottom: 5px;
+            }
+
+            .nav-item:hover{
+                border-bottom: 1px solid white;
+            }
+        }
+    }
+}
+
+
+/* Sidebar */
+.sidebar-toggle {
+    position: fixed;
+    top: 40px;
+    right: 57px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1100;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.sidebar-toggle .bar {
+    width: 25px;
+    height: 4px;
+    background-color: white;
+    transition: all 0.3s ease-in-out;
+    border-radius: 20px;
+}
+
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: -300px; /* Tersembunyi awalnya */
+    width: 257px;
+    height: 100%;
+    background-color: rgba(51, 51, 51, 0.91);
+    color: white;
+    padding: 20px;
+    transition: right 0.3s ease-in-out;
+    z-index: 1000;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 15px 0;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.sidebar-open .sidebar {
+    right: 0; /* Sidebar muncul */
+}
+
+.sidebar-open .overlay {
+    display: block; /* Tampilkan overlay */
+}
+
+.sidebar-open .bar:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+}
+
+.sidebar-open .bar:nth-child(2) {
+    opacity: 0; /* Hilangkan bar tengah */
+}
+
+.sidebar-open .bar:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+}
+
+/* Overlay */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 999;
+}
+
+
+/* Konten */
+.konten{
+    li{
+        
+        img{
+            width: 100%;
+            height: 1000px;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .isi{
+            judul{
+                position:absolute;
+                color: white;
+                left: 25%;
+                bottom: 130px;
+                font-size: 30px;
+                font-weight: 600;
+            }
+
+            sub{
+                position:absolute;
+                color: white;
+                left: 25%;
+                bottom: 165px;
+            }
+
+            a{
+                position:absolute;
+                color: white;
+                left: 25%;
+                bottom: 60px;
+                border: 3px solid white;
+                padding: 10px 20px;
+                text-decoration: none;
+                font-weight: bold;
+                font-size: 35px;
+            }
+
+            a:hover{
+                color: black;
+                background-color: white;
+                border: 3px solid rgb(255, 255, 255);
+            }
+        }
+
+
+    }
+}
+
+/* Footer */
+footer{
+    color: white;
+
+    .warning{
+        text-align: center;
+        font-size: 15px;
+        font-weight: bold;
+        
+        a{
+            color: white;
+            border-bottom: 1px white solid;
+        }
+    }
+
+    div{
+        display: flex;
+        justify-content: center;
+        margin: 20px 0;
+        a{
+            color: white;
+            margin: -5px 10px;
+        }
+
+        a:hover{
+            color: rgb(187, 187, 187);
+        }
+    }
+
+    .copy{
+        font-weight: bold;
+        text-align: center;
+        font-size: 10px;
+    }
+
+    .copy1{
+        font-weight: bold;
+        text-align: center;
+        font-size: 10px;
+    }
+}
